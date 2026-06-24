@@ -6,4 +6,11 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
 
-echo "Session start hook: environment ready."
+echo '{"async": true, "asyncTimeout": 120000}'
+
+cd "$CLAUDE_PROJECT_DIR"
+
+if [ -f "package.json" ]; then
+  echo "Installing npm dependencies..."
+  npm install
+fi
