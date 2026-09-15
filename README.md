@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# たつぽっと議事録AI
 
-## Getting Started
+録音・話者タグ付け・AI議事録・ToDo抽出・資料連携・AIチャット・商談コーチAI・リアルタイムAI支援・資料作成(PPT)・メール/カレンダー連携・Slack共有・AI横断検索までを一気通貫で行う会議アシスタントです。
 
-First, run the development server:
+## セットアップ
 
 ```bash
+npm install
+cp env.example .env.local
+# .env.local に ANTHROPIC_API_KEY を設定してください
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) を開いてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 主な機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🎙️ **録音・文字起こし**: ブラウザのWeb Speech APIでリアルタイム文字起こし（Chrome推奨）。ノイズ抑制・エコーキャンセル有効。話者は手動タグ付け（自動ダイアライゼーションは未対応）。
+- 📋 **AI議事録**: 要約・決定事項・未決事項・質問と回答・キーワード・次回アジェンダ候補を自動生成。
+- ✅ **ToDo管理**: 担当者・期限付きのタスクをカンバン形式で管理。ブラウザ通知でのリマインド（タブを開いている間）。
+- 📂 **資料連携**: PDF/TXT/MDの会議資料をアップロードし、発言内容との食い違いや抜け漏れをAIが検出。
+- 🤖 **会議AIチャット**: 会議の内容について自然言語で質問できます。
+- 🎯 **商談コーチAI**: 商談スコア・良かった点・改善点・成約可能性・次にやるべきことを分析。
+- 🧠 **リアルタイムAI支援**: 録音中、直近の会話から助言を自動生成。
+- 📊 **資料作成**: 提案資料/振り返り/上司報告の3モードでPowerPoint(.pptx)を生成。
+- 📧 **メール文章生成**・**📅 カレンダー(.ics)出力**・**💬 Slack共有**（Incoming Webhook）。
+- 🔍 **AI横断検索**: 自然言語で過去の会議を検索。
 
-## Learn More
+## 制約・今後の対応
 
-To learn more about Next.js, take a look at the following resources:
+- データはブラウザのlocalStorageに保存されます（複数人でのアクセス権限管理やサーバー側の暗号化は未対応）。
+- 話者の自動識別（音声ダイアライゼーション）、Word/Excel/PPTの資料読み込み、Google Calendar/Teamsの直接連携は今後の対応予定です。
+- 音声ファイルからの自動文字起こしには別途音声認識APIの連携が必要です。現在はブラウザでのリアルタイム録音時の文字起こし、またはテキスト貼り付けに対応しています。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 技術スタック
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 16 (App Router) / React 19 / TypeScript / Tailwind CSS v4 / Anthropic Claude API / pptxgenjs / pdfjs-dist
