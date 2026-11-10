@@ -1,0 +1,9 @@
+{
+  "name": "wp-ai-poster",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generate SEO articles with Claude and post them to WordPress via REST API",
+  "scripts": { "start": "node poster.mjs", "dry": "node poster.mjs --dry-run" },
+  "dependencies": { "@anthropic-ai/sdk": "^0.105.0" }
+}
