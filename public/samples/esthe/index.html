@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salon Lumière｜エステサロン（制作サンプル）</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{--base:#fbf7f4;--pink:#e8b4a8;--deep:#b9766a;--text:#5a4a46;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--base);color:var(--text);font-family:"Zen Maru Gothic",sans-serif;line-height:1.9}
+.en{font-family:"Marcellus",serif;letter-spacing:.12em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px}
+header .logo{font-size:22px;color:var(--deep)}
+.btn{display:inline-block;background:var(--deep);color:var(--white);padding:14px 32px;border-radius:999px;font-weight:700;box-shadow:0 6px 16px #b9766a44}
+header .btn{padding:8px 18px;font-size:13px}
+.fv{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;padding:40px 20px 80px;max-width:1000px;margin:0 auto}
+.fv h1{font-size:clamp(28px,5vw,44px);line-height:1.5}
+.fv h1 span{color:var(--deep)}
+.fv p{margin:16px 0 28px}
+.fv .img{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,#f3d9d1,#e8b4a8);display:grid;place-items:center;color:#fff;font-size:13px}
+@media(max-width:720px){.fv{grid-template-columns:1fr}.fv .img{max-width:320px;margin:0 auto}}
+section{padding:80px 0}
+.ttl{text-align:center;margin-bottom:40px}
+.ttl .en{display:block;font-size:30px;color:var(--deep)}
+.ttl small{font-size:13px}
+.worry{background:var(--white)}
+.worry ul{list-style:none;display:grid;gap:12px;max-width:560px;margin:0 auto}
+.worry li{background:var(--base);padding:14px 18px;border-radius:12px}
+.worry li::before{content:"✓ ";color:var(--deep);font-weight:700}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feat div{background:var(--white);border-radius:20px;padding:28px;text-align:center}
+.feat b{display:block;font-size:34px;color:var(--pink)}
+.menu{background:var(--white)}
+.mlist{display:grid;gap:16px;max-width:720px;margin:0 auto}
+.mitem{display:flex;justify-content:space-between;align-items:center;border:1px solid #f0e2dc;border-radius:16px;padding:20px 24px;gap:12px}
+.mitem h3{font-size:17px}.mitem p{font-size:13px;opacity:.8}
+.mitem .price{text-align:right;white-space:nowrap}
+.mitem .price s{font-size:12px;opacity:.6;display:block}
+.mitem .price strong{font-size:22px;color:var(--deep)}
+.voice{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.voice div{background:var(--white);border-radius:20px;padding:24px;font-size:14px}
+.voice small{display:block;margin-top:10px;color:var(--deep)}
+.flow ol{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;counter-reset:s}
+.flow li{background:var(--white);border-radius:16px;padding:20px;text-align:center;counter-increment:s}
+.flow li::before{content:"STEP " counter(s);display:block;font-family:Marcellus,serif;color:var(--deep)}
+.cta{background:linear-gradient(135deg,#f3d9d1,#e8b4a8);text-align:center;color:var(--text)}
+.cta h2{font-size:24px;margin-bottom:8px}
+.cta p{margin-bottom:24px}
+footer{text-align:center;padding:30px;font-size:12px;opacity:.7}
+</style>
+</head>
+<body>
+<header><span class="logo en">Salon Lumière</span><a class="btn" href="#cta">ご予約</a></header>
+
+<div class="fv">
+ <div>
+  <h1>がんばる毎日に、<br><span>ご褒美のような90分</span>を。</h1>
+  <p>ハンドケアにこだわったフェイシャル＆ボディケア。<br>完全個室・女性スタッフのみのプライベートサロンです。</p>
+  <a class="btn" href="#cta">初回限定 50%OFFで予約する</a>
+ </div>
+ <div class="img">メインビジュアル（ご支給写真）</div>
+</div>
+
+<section class="worry"><div class="wrap">
+ <div class="ttl"><span class="en">Worry</span><small>こんなお悩みありませんか？</small></div>
+ <ul><li>夕方になると顔のくすみ・むくみが気になる</li><li>肩や首のこりで、ぐっすり眠れない</li><li>自分のためにゆっくりする時間がない</li></ul>
+</div></section>
+
+<section><div class="wrap">
+ <div class="ttl"><span class="en">Feature</span><small>選ばれる3つの理由</small></div>
+ <div class="feat">
+  <div><b class="en">01</b><h3>完全個室</h3><p>人目を気にせず、心からくつろげます。</p></div>
+  <div><b class="en">02</b><h3>国家資格スタッフ</h3><p>体の仕組みを知るプロが施術します。</p></div>
+  <div><b class="en">03</b><h3>勧誘なし</h3><p>無理な回数券の勧誘は一切ありません。</p></div>
+ </div>
+</div></section>
+
+<section class="menu"><div class="wrap">
+ <div class="ttl"><span class="en">Menu</span><small>メニュー・料金</small></div>
+ <div class="mlist">
+  <div class="mitem"><div><h3>透明感フェイシャル</h3><p>60分｜毛穴洗浄・パック・デコルテケア</p></div><div class="price"><s>¥9,900</s><strong>¥4,950</strong></div></div>
+  <div class="mitem"><div><h3>リンパボディケア</h3><p>90分｜全身のむくみ・こりに</p></div><div class="price"><s>¥13,200</s><strong>¥6,600</strong></div></div>
+  <div class="mitem"><div><h3>ご褒美フルコース</h3><p>120分｜フェイシャル＋ボディ</p></div><div class="price"><s>¥19,800</s><strong>¥9,900</strong></div></div>
+ </div>
+ <p style="text-align:center;font-size:12px;margin-top:16px">※初回限定価格（税込）</p>
+</div></section>
+
+<section><div class="wrap">
+ <div class="ttl"><span class="en">Voice</span><small>お客さまの声</small></div>
+ <div class="voice">
+  <div>施術後、鏡を見て顔色の明るさにびっくり！久しぶりに朝までぐっすり眠れました。<small>30代・会社員</small></div>
+  <div>勧誘がまったくなくて安心。月1回の自分へのご褒美にしています。<small>40代・主婦</small></div>
+ </div>
+</div></section>
+
+<section class="flow"><div class="wrap">
+ <div class="ttl"><span class="en">Flow</span><small>ご来店の流れ</small></div>
+ <ol><li>Web・LINEで予約</li><li>カウンセリング</li><li>施術</li><li>アフターティー</li></ol>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+ <h2>初回限定 50%OFF</h2><p>毎月10名さま限定｜ご予約はLINEから24時間受付</p>
+ <a class="btn" href="#">LINEで予約する</a>
+</div></section>
+<footer>© Salon Lumière — Web制作サンプル（架空の店舗です）</footer>
+</body>
+</html>

@@ -31,6 +31,16 @@ const works = [
     body: "部活・スクール・社会人チーム向け。タップで出欠入力、集計はワンタップでLINEに貼れる形に。/demo/attendance で実際に触れます。",
     tags: ["部活・クラブ向け", "LINE連携"],
   },
+  {
+    title: "ランディングページ制作サンプル",
+    body: "会員制ラウンジ（/samples/lounge/index.html）、エステサロン（/samples/esthe/index.html）。スマホ対応・予約導線つき。",
+    tags: ["LP制作", "レスポンシブ"],
+  },
+  {
+    title: "EC月次レポート自動化（Googleスプレッドシート）",
+    body: "CSVを貼るだけで月別推移・前月比・前年比・商品ランキング・グラフを自動作成。メルマガの価格・リンクチェックも自動化。",
+    tags: ["GAS", "業務自動化"],
+  },
 ];
 
 const plans = [
